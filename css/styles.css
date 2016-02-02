@@ -1,0 +1,71 @@
+body {
+  margin: 20px;
+}
+
+.subway-line-color {
+  display: inline-block;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+
+/*Sokolnicheskaya*/
+.subway-line-color-1 {
+  background-color: #ed1b35;
+}
+
+/*Zamoskvoretskaya*/
+.subway-line-color-2 {
+  background-color: #44b85c;
+}
+
+/*Arbatsko-Pokrovskaya*/
+.subway-line-color-3 {
+  background-color: #0078bf;
+}
+
+/*Filyovskaya*/
+.subway-line-color-4 {
+  background-color: #19c1f3;
+}
+
+/*Koltsevaya*/
+.subway-line-color-5 {
+  background-color: #894e35;
+}
+
+/*Kaluzhsko-Rizhskaya*/
+.subway-line-color-6 {
+  background-color: #f58631;
+}
+
+/*Tagansko-Krasnopresnenskaya*/
+.subway-line-color-7 {
+  background-color: #8e479c;
+}
+
+/*Kalininsko-Solntsevskaya*/
+.subway-line-color-8 {
+  background-color: #ffcb31;
+}
+
+/*Serpukhovsko-Timiryazevskaya*/
+.subway-line-color-9 {
+  background-color: #a1a2a3;
+}
+
+/*Lyublinsko-Dmitrovskaya*/
+.subway-line-color-10 {
+  background-color: #b3d445;
+}
+
+/*Kakhovskaya*/
+.subway-line-color-11 {
+  background-color: #79cdcd;
+}
+
+/*Butovskaya*/
+.subway-line-color-12 {
+  background-color: #acbfe1;
+}

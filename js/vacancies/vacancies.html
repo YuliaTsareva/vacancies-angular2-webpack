@@ -1,0 +1,33 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="col-md-3">Position</th>
+    <th class="col-md-2">Company</th>
+    <th class="col-md-2">Salary</th>
+    <th class="col-md-2">Location</th>
+    <th class="col-md-3">Key Skills</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="vacancy in vacancies">
+    <td>
+      <a href="{{vacancy.url}}">{{vacancy.name}}</a>
+    </td>
+    <td>
+      <img ng-if="vacancy.companyLogo" ng-src="{{vacancy.companyLogo}}" title="{{vacancy.company}}">
+      <span ng-if="!vacancy.companyLogo">{{vacancy.company}}</span>
+    </td>
+    <td>
+      {{vacancy.salary | formatSalary}}
+    </td>
+    <td>
+      <div ng-if="vacancy.location.lineId"
+           class="subway-line-color {{'subway-line-color-' + vacancy.location.lineId}}"></div>
+      {{vacancy.location.station}}
+    </td>
+    <td>
+      {{vacancy.keySkills | formatKeySkills}}
+    </td>
+  </tr>
+  </tbody>
+</table>
