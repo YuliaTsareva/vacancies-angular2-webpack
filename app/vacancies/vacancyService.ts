@@ -19,7 +19,7 @@ export default function($http) {
       let vacancies = [];
 
       response.data.items.forEach((item) => {
-        let vacancy = createVacancyFromDto(item);
+        let vacancy:any = createVacancyFromDto(item);
 
         getKeySkillsAsync(item).then((keySkills) => {
           vacancy.keySkills = keySkills;
@@ -32,7 +32,7 @@ export default function($http) {
     }
 
     function createVacancyFromDto(dto) {
-      var vacancy = {
+      var vacancy:any = {
         name: dto.name,
         company: dto.employer.name,
         companyLogo: dto.employer.logo_urls && dto.employer.logo_urls['90'],

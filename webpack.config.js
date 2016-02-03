@@ -4,32 +4,35 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+  devtool: 'eval-source-map',
 
-  context: path.resolve('js'),
+  context: path.resolve('app'),
 
-  entry: './app.js',
+  entry: './app.ts',
 
   output: {
     path: path.resolve('build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    sourceMapFilename: 'bundle.map'
+  },
+
+  resolve: {
+    extensions: ['', '.ts', '.js']
   },
 
   module: {
     preLoaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'jscs-loader'
+        test: /\.ts$/,
+        loader: 'tslint-loader',
+        exclude: [/node_modules/]
       }
     ],
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ['es2015'] // to compile ES6 to ES5
-        }
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        exclude: [/node_modules\/(?!(ng2-.+))/]
       },
       {
         test: /\.css$/,
