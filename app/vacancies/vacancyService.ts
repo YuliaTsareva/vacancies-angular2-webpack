@@ -4,7 +4,6 @@ export default function($http) {
 
   this.getVacanciesAsync = function(searchText, regionId) {
 
-    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
     const config = {
       params: {
         text: searchText,
@@ -61,8 +60,6 @@ export default function($http) {
         () => null
       );
     }
-
-    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 
     function onError(response) {
       console.log('Something went wrong:', response.status, response.statusText);
